@@ -6,15 +6,15 @@
     <title>Document</title>
 </head>
 <body>
-    <button onclick="toggletext()">Mostrar/Esconder Texto</button>
-    <p id="text" style="display: none;">Aqui tem um texto escondido.</p>
+    <button onclick="changeColor()">Clique Aqui!</button>
+
     <script>
-        function toggletext() {
-            var text = document.getElementById("text");
-            if (text.style.display === "none") {
-                text.style.display = "block";
-            }       else {
-                text.style.display = "none";
+        function changeColor() {
+            var color = document.getElementById("Color");
+            if (document.body.style.backgroundColor === "white") {
+                document.body.style.backgroundColor = "black";
+            } else {
+                document.body.style.backgroundColor = "white";
             }
         }
     </script>

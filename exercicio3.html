@@ -6,15 +6,20 @@
     <title>Document</title>
 </head>
 <body>
-    <button onclick="countClicks()">Clique Aqui</button>
-    <p id="clickCount">Cliques: 0</p>
+    <textarea name="comments" id="comments"></textarea><br>
+    <button onclick="addItem()">Adicionar Comentario</button>
+    <ul id="list"></ul>
 
     <script>
-        let count = 0;
-        function countClicks() {
-            count++;
-            document.getElementById("clickCount").innerHTML = "Cliques: " + count;
+        function addItem() {
+            var comment = document.getElementById("comments").value;
+            if (comment !== "") {
+                var li = document.createElement("li");
+                li.textContent = comment;
+                document.getElementById("list").appendChild(li);
+                document.getElementById("comments").value = "";
+            }
         }
-    </script>
+   </script>
 </body>
 </html>
